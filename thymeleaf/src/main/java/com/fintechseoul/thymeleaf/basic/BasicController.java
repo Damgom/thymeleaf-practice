@@ -88,6 +88,13 @@ public class BasicController {
         }
     }
 
+    @GetMapping("/operation")
+    public String operation(Model model) {
+        model.addAttribute("nullData", null);
+        model.addAttribute("data", "Spring!");
+        return "basic/operator";
+    }
+
     @Data
     static class User {
         private String username;
